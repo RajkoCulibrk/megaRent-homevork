@@ -100,4 +100,51 @@ main .main__greeting h3 {
   padding: 0.5rem;
 }
 
+.pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 0;
+}
+.pricing h4 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.pricing table {
+  border-collapse: collapse;
+}
+.pricing table thead {
+  background-color: #ff3720;
+}
+.pricing table thead th {
+  padding: 0.5rem 3.5rem;
+}
+.pricing table thead * {
+  color: #f0f0f0;
+}
+.pricing table tbody {
+  text-align: center;
+}
+.pricing table tbody tr {
+  border-bottom: 1px solid gray;
+}
+.pricing table tbody tr td {
+  padding: 0.5rem 0;
+}
+.pricing table tbody tr td:first-of-type {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+.pricing button {
+  background-color: #ff3720;
+  width: 10%;
+  outline: none;
+  border: none;
+  color: #f0f0f0;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */

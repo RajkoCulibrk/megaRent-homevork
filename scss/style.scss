@@ -102,3 +102,53 @@ main {
     }
   }
 }
+
+.pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 0;
+
+  h4 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  table {
+    border-collapse: collapse;
+    thead {
+      background-color: $main_red;
+      th {
+        padding: 0.5rem 3.5rem;
+      }
+
+      & * {
+        color: $grey_background;
+      }
+    }
+    tbody {
+      text-align: center;
+      tr {
+        border-bottom: 1px solid gray;
+        td {
+          padding: 0.5rem 0;
+        }
+        td:first-of-type {
+          background-color: $grey_background;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  button {
+    background-color: $main_red;
+    width: 10%;
+    outline: none;
+    border: none;
+    color: $grey_background;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    display: none;
+  }
+}
