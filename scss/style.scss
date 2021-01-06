@@ -21,9 +21,9 @@ main {
     margin-top: 2rem;
 
     .header__logo {
-      font-size: 2.5rem;
+      font-size: 1.5rem;
       font-weight: 700;
-      flex: 0.5;
+
       span {
         color: $main-red;
       }
@@ -33,9 +33,13 @@ main {
       list-style: none;
       display: flex;
       flex-wrap: wrap;
-      flex: 0.6;
+
+      margin-left: auto;
       font-size: 1rem;
       justify-content: space-between;
+      li {
+        margin-left: 1rem;
+      }
       a {
         text-decoration: none;
         text-transform: uppercase;
@@ -98,6 +102,9 @@ main {
         color: $grey_background;
         text-transform: uppercase;
         padding: 0.5rem;
+        &:hover {
+          background-color: black;
+        }
       }
     }
   }
@@ -117,6 +124,7 @@ main {
 
   table {
     border-collapse: collapse;
+    max-width: 600px;
     thead {
       background-color: $main_red;
       th {
@@ -143,12 +151,142 @@ main {
   }
   button {
     background-color: $main_red;
-    width: 10%;
+    width: 40%;
     outline: none;
     border: none;
     color: $grey_background;
     text-transform: uppercase;
     padding: 0.5rem;
     display: none;
+  }
+}
+
+footer {
+  padding: 0 15%;
+  background-color: black;
+  .footer__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-bottom: 2px solid red;
+    margin: 2rem 0;
+    span {
+      color: $red_dark;
+    }
+  }
+
+  .footer__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    padding-bottom: 2rem;
+
+    address {
+      display: flex;
+      flex-direction: column;
+      span {
+        color: $grey_background;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  main {
+    height: 60vh;
+    .main__greeting {
+      margin-top: 20%;
+      h2 {
+        font-size: 2rem;
+      }
+      h3 {
+        font-size: 1rem;
+      }
+    }
+    header {
+      .header__logo {
+        font-size: 1rem;
+      }
+      width: 95%;
+      ul {
+        margin-left: auto;
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  footer {
+    .footer__logo {
+      text-align: center;
+    }
+    .footer__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      address {
+        margin: 2rem 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    background-image: none;
+    background-color: black;
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      .header__logo {
+        float: left;
+      }
+      ul {
+        flex-direction: column;
+        margin: auto;
+        li {
+          margin-top: 2rem;
+          text-align: center;
+        }
+      }
+    }
+    .main__greeting {
+      margin-top: 5%;
+      h2 {
+        font-size: 2rem;
+      }
+      h3 {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .catalog {
+    h4 {
+      font-size: 1rem;
+    }
+  }
+
+  .pricing {
+    table {
+      display: none;
+    }
+    button {
+      display: block;
+    }
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    .footer__logo {
+      width: 80%;
+    }
+    .footer__content {
+      padding: 0;
+      padding-bottom: 1rem;
+    }
+    iframe {
+      max-width: 80%;
+    }
   }
 }

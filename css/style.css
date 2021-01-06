@@ -24,9 +24,8 @@ main header {
   margin-top: 2rem;
 }
 main header .header__logo {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  flex: 0.5;
 }
 main header .header__logo span {
   color: #ff3720;
@@ -35,9 +34,12 @@ main header ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  flex: 0.6;
+  margin-left: auto;
   font-size: 1rem;
   justify-content: space-between;
+}
+main header ul li {
+  margin-left: 1rem;
 }
 main header ul a {
   text-decoration: none;
@@ -99,6 +101,9 @@ main .main__greeting h3 {
   text-transform: uppercase;
   padding: 0.5rem;
 }
+.catalog .catalog__cars .car button:hover {
+  background-color: black;
+}
 
 .pricing {
   display: flex;
@@ -113,6 +118,7 @@ main .main__greeting h3 {
 }
 .pricing table {
   border-collapse: collapse;
+  max-width: 600px;
 }
 .pricing table thead {
   background-color: #ff3720;
@@ -138,13 +144,135 @@ main .main__greeting h3 {
 }
 .pricing button {
   background-color: #ff3720;
-  width: 10%;
+  width: 40%;
   outline: none;
   border: none;
   color: #f0f0f0;
   text-transform: uppercase;
   padding: 0.5rem;
   display: none;
+}
+
+footer {
+  padding: 0 15%;
+  background-color: black;
+}
+footer .footer__logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-bottom: 2px solid red;
+  margin: 2rem 0;
+}
+footer .footer__logo span {
+  color: #e42b15;
+}
+footer .footer__content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  padding-bottom: 2rem;
+}
+footer .footer__content address {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer__content address span {
+  color: #f0f0f0;
+}
+
+@media screen and (max-width: 900px) {
+  main {
+    height: 60vh;
+  }
+  main .main__greeting {
+    margin-top: 20%;
+  }
+  main .main__greeting h2 {
+    font-size: 2rem;
+  }
+  main .main__greeting h3 {
+    font-size: 1rem;
+  }
+  main header {
+    width: 95%;
+  }
+  main header .header__logo {
+    font-size: 1rem;
+  }
+  main header ul {
+    margin-left: auto;
+    font-size: 0.7rem;
+  }
+
+  footer .footer__logo {
+    text-align: center;
+  }
+  footer .footer__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer__content address {
+    margin: 2rem 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  main {
+    background-image: none;
+    background-color: black;
+  }
+  main header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  main header .header__logo {
+    float: left;
+  }
+  main header ul {
+    flex-direction: column;
+    margin: auto;
+  }
+  main header ul li {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  main .main__greeting {
+    margin-top: 5%;
+  }
+  main .main__greeting h2 {
+    font-size: 2rem;
+  }
+  main .main__greeting h3 {
+    font-size: 1rem;
+  }
+
+  .catalog h4 {
+    font-size: 1rem;
+  }
+
+  .pricing table {
+    display: none;
+  }
+  .pricing button {
+    display: block;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  footer .footer__logo {
+    width: 80%;
+  }
+  footer .footer__content {
+    padding: 0;
+    padding-bottom: 1rem;
+  }
+  footer iframe {
+    max-width: 80%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
